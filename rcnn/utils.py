@@ -166,6 +166,19 @@ class Dataset:
     def add_class(self, source, class_id, class_name):
         assert "." not in source, "Source name cannot contain a dot"
         for info in self.class_info:
-            if info['source'] ==  source and info["id"] == class_id:
+            if info['source'] == source and info["id"] == class_id:
                 return
-        self.class_info
+        self.class_info.append({
+            "source": source,
+            "id": class_id,
+            "name": class_name,
+        })
+
+    def add_image(self, source, image_id, path, **kwargs):
+        image_info = {
+            "id": image_id,
+            "source": source,
+            "path": path,
+        }
+        image_info.update(kwargs)
+        self.image_info.append(image_info)
