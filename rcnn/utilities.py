@@ -4,9 +4,10 @@ import math
 import random
 import numpy as np
 import cv2
-from rcnn import config
+from config import Config
 
-class ShapeConfig(config.Config):
+
+class ShapeConfig(Config):
     # Give the configuration a recognizable name
     NAME = "shapes"
 
@@ -26,4 +27,3 @@ class ShapeConfig(config.Config):
     STEPS_PER_EPOCH = 100
 
     VALIDATION_STEPS = 5
-
