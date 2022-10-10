@@ -187,4 +187,8 @@ class Dataset:
         return ""
 
     def prepare(self, class_map=None):
-        # TODO
+        pass
+        # TODO: Class maps
+        # It should handle mapping classes from different datasets but with the same class ID
+        # assignees: iammix
+        # labels: enhancement
