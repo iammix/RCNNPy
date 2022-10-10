@@ -182,3 +182,9 @@ class Dataset:
         }
         image_info.update(kwargs)
         self.image_info.append(image_info)
+
+    def image_reference(self, image_id):
+        return ""
+
+    def prepare(self, class_map=None):
+        # TODO
